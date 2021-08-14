@@ -126,11 +126,11 @@ function filmeFavorito() {
 
 // EXERCÍCIO 13
 function imprimeChamada() {
-const chamadaFilme = {
-    nome: "O Diabo Veste Prada",
-    ano: 2006,
-    diretor: "David Frankel",
-    atores:[" Meryl Streep",  " Anne Hathaway",  " Emily Blunt",  " Stanley Tucci."]
+  const chamadaFilme = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores:[" Meryl Streep",  " Anne Hathaway",  " Emily Blunt",  " Stanley Tucci."]
 }
 return "Venha assistir ao filme "+ chamadaFilme.nome + ", de " + chamadaFilme.ano + ", dirigido por " + chamadaFilme.diretor + " e estrelado por" + chamadaFilme.atores
 
@@ -138,7 +138,13 @@ return "Venha assistir ao filme "+ chamadaFilme.nome + ", de " + chamadaFilme.an
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
-
+const retangulo ={
+largura: lado1,
+altura : lado2,
+perimetro :(2 * (lado1 + lado2)),
+area : (lado1 * lado2)
+}
+return retangulo
 }
 
 // EXERCÍCIO 15
