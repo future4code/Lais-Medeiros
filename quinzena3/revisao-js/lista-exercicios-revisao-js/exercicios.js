@@ -72,14 +72,24 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-
+let retornoNumero = []
+for (let i = 0; i < n.length  ; i++){
+  if(i % 2 === 0){
+    retornoNumero = n.push(i)
+  }
 }
-
+return retornoNumero
+}
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  if ( a === b && b === c){
+       return 'Escaleno'
+}else if(a != b && b != c && c != a){
+  return 'Equilátero'
+}else{
+  return 'Isósceles'
+}
+  
 }
 
 // EXERCÍCIO 09
@@ -105,12 +115,25 @@ function ordenaArray(array) {
 
 // EXERCÍCIO 12
 function filmeFavorito() {
-
+  const favoritosFilme = {
+  nome: "O Diabo Veste Prada",
+  ano: 2006,
+  diretor: "David Frankel",
+  atores:["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  }
+  return favoritosFilme
 }
 
 // EXERCÍCIO 13
 function imprimeChamada() {
-  // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+const chamadaFilme = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores:[" Meryl Streep",  " Anne Hathaway",  " Emily Blunt",  " Stanley Tucci."]
+}
+return "Venha assistir ao filme "+ chamadaFilme.nome + ", de " + chamadaFilme.ano + ", dirigido por " + chamadaFilme.diretor + " e estrelado por" + chamadaFilme.atores
+
 }
 
 // EXERCÍCIO 14
