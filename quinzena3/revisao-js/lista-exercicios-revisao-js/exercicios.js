@@ -138,18 +138,28 @@ return "Venha assistir ao filme "+ chamadaFilme.nome + ", de " + chamadaFilme.an
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
-const retangulo ={
-largura: lado1,
-altura : lado2,
-perimetro :(2 * (lado1 + lado2)),
-area : (lado1 * lado2)
-}
-return retangulo
+  const retangulo ={
+    largura: lado1,
+    altura : lado2,
+    perimetro :(2 * (lado1 + lado2)),
+    area : (lado1 * lado2)
+  }
+  return retangulo
 }
 
 // EXERCÍCIO 15
 function anonimizaPessoa(pessoa) {
-
+  let pessoas = {
+    nome: "Astrodev",
+    idade: 25,
+    email: "astrodev@labenu.com.br",
+    endereco: "Rua do Futuro, 4"
+  }
+  let novaInformacao = {
+    ...pessoas, 
+    nome: "ANONIMO"
+  }
+  return novaInformacao
 }
 
 // EXERCÍCIO 16A
