@@ -109,8 +109,16 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-  
-
+  for (let i = 0; i < array.length; i++) { 
+     for (let j = 0; j < array.length - i - 1; j++) {      
+       if (array[j] > array[j + 1]) {         
+          let arrayTemp = array[j]     
+          array[j] = array[j + 1]        
+          array[j + 1] = arrayTemp       
+            }     
+       }  
+  }   
+   return array
 }
 
 // EXERCÍCIO 12
@@ -164,6 +172,10 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
+let arrayDePessoas = [{ nome: "Pedro", idade: 20 },
+{ nome: "João", idade: 10 },
+{ nome: "Paula", idade: 12 },
+{ nome: "Artur", idade: 89 } ]
 
 }
 
