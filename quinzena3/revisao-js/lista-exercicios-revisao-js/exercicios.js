@@ -38,8 +38,17 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
-
+  let maiorNumero = 0
+  for(const numero of array){
+    if(numero > maiorNumero){
+      maiorNumero = numero 
+    }
+   }
+   return maiorNumero
 }
+  
+  
+
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
