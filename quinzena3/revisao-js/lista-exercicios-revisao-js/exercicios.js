@@ -1,11 +1,24 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
-
+  let arrayInvertido = []
+  while(array.length){
+    arrayInvertido.push(array.pop())
+  }
+  return arrayInvertido
 }
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-
+  let numeroParElevado = []
+  let arrayParesQuadrado = array.filter((item)=>{
+    if(item % 2 === 0){
+  return  true
+    }
+    return falso
+  })
+  let paresQuadrado = arrayParesQuadrado.map((item)=>{
+    return item ** 2
+  })
 }
 
 // EXERCÍCIO 03
@@ -57,6 +70,7 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
+  
 
 }
 
