@@ -9,16 +9,17 @@ function inverteArray(array) {
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-  let numeroParElevado = []
+  //let numeroParElevado = []
   let arrayParesQuadrado = array.filter((item)=>{
     if(item % 2 === 0){
   return  true
     }
-    return falso
   })
-  let paresQuadrado = arrayParesQuadrado.map((item)=>{
+  let paresaoQuadrado = arrayParesQuadrado.map((item)=>{
     return item ** 2
+    
   })
+return paresaoQuadrado
 }
 
 // EXERCÍCIO 03
@@ -72,25 +73,21 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-let retornoNumero = []
-for (let i = 0; i < n.length  ; i++){
-  if(i % 2 === 0){
-    retornoNumero = n.push(i)
-  }
+  
+ 
 }
-return retornoNumero
-}
+
+
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  if ( a === b && b === c){
-       return 'Escaleno'
-}else if(a != b && b != c && c != a){
-  return 'Equilátero'
-}else{
-  return 'Isósceles'
+  if(a == b && a == c){
+    return 'Equilátero'
+  }else if(a == b || a == c || b == c){
+    return 'Isósceles'
+  } else
+        return 'Escaleno'
 }
-  
-}
+
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
@@ -172,10 +169,7 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
-let arrayDePessoas = [{ nome: "Pedro", idade: 20 },
-{ nome: "João", idade: 10 },
-{ nome: "Paula", idade: 12 },
-{ nome: "Artur", idade: 89 } ]
+
 
 }
 
