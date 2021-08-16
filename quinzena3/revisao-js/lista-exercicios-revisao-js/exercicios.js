@@ -93,10 +93,11 @@ function checaTriangulo(a, b, c) {
 function comparaDoisNumeros(num1, num2) {
   // Formato do objeto a ser retornado:
   // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+   //maiorNumero: X,
+   //maiorDivisivelPorMenor: Y,
+   //diferenca: Z
+   //}
+   
 }
 
 // EXERCÍCIO 10
@@ -169,9 +170,20 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
-
-
+  let pessoasAdutas = [
+   { nome: "Pedro", idade: 20 },
+    { nome: "João", idade: 10 },
+    { nome: "Paula", idade: 12 },
+    { nome: "Artur", idade: 89 } 
+  ]
+let pessoasMaior = arrayDePessoas.filter((item, idex , array) =>{
+  return item.idade >=  18
+  
+})
+console.log(pessoasMaior)
 }
+
+
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
