@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(240, 209, 230)
+}
+
+.div-inicio{
+    background-color:rgb(219, 175, 213)
+}
+.div-um{
+    background-color: rgb(230, 211, 230);
+    text-align:justify;
+    font-size: 20px;
+    border-style: inset;
+    }
+
+   
+
+.primeiro{
+    font-size: 170%;
+}
+   
+.segundo{
+    font-size: 150%;
+    
+}
+.terceiro{
+    font-size: 150%;
+}
+.quarto{
+    font-size: 150%;
+}
+.quinto{
+    font-size: 150%;
+}
+.sexto{
+    font-size: 150%;
+}
