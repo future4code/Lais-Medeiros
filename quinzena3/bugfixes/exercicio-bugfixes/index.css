@@ -44,6 +44,7 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+  
 }
 
 .botao-amarelo:hover {
@@ -52,7 +53,7 @@ div img {
 
 .container {
     height: 500px;
-    text-align: center;
+    text-align: center;  
 }
 
 .icone {
@@ -77,14 +78,17 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+
 }
 
-#container-para-comprar>p {
+#container-para-comprar>p{
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
 }
-
+#container-para-comprar>a{
+    display:block;
+}
 
 /**
   *
