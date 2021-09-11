@@ -3,13 +3,14 @@ import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 
+
 function App() {
   return (
     <div className="App">
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
+          imagem="" 
           nome="Astrodev" 
           descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
         />
@@ -19,6 +20,18 @@ function App() {
           texto="Ver mais"
         />
       </div>
+      
+
+      <div className ="page-section-container">
+      <CardGrande 
+        imagem ="./Imagem/email.png"
+        texto = ""
+        />
+        <CardGrande 
+        imagem =""
+        texto = ""
+        />
+        </div>
 
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
