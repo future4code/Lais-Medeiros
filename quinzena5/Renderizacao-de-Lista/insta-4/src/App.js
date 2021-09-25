@@ -31,7 +31,8 @@ class MensagemConteiner extends React.Component{
   render() {
     const listaDeComponente = this.state.cadastro.map((cadastros)=>{
       return(
-        <p>{cadastros.nomeUsuario}
+        <p>
+        {cadastros.nomeUsuario}
         {cadastros.fotoUsuario}
         {cadastros.fotoPost}
         </p>
