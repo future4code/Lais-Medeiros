@@ -1,51 +1,44 @@
 import React from 'react';
 import styled from 'styled-components'
-import Post from './components/Post/Post'
+import Post from './components/Post/Post';
+import "./App.css"
 
-const MensagemConteiner = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+const AppConteiner = styled.div`
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 `
-class MensagemConteiner extends React.Component{
-  state = {
-    cadastro :[
+
+class App extends React.Component {
+  state ={
+    postagem:[
       {
-        nomeUsuario: "Paulinha",
-        fotoUsuario: "https://picsum.photos/50/50",
-        fotoPost: "https://picsum.photos/200/150"
-      },
-      {
-        nomeUsuario: "Vagner",
-        fotoUsuario: "https://picsum.photos/50/51",
-        fotoPost: "https://picsum.photos/200/151"
-      },
-      {
-        nomeUsuario: "Mateus",
-        fotoUsuario: "https://picsum.photos/50/52",
-        fotoPost: "https://picsum.photos/200/152"
+        nomeUsuario:'paulinha',
+        fotoUsuario: 'https://picsum.photos/50/50',
+        fotoPost:'https://picsum.photos/200/150'
       }
     ]
   }
+
   render() {
-    const listaDeComponente = this.state.cadastro.map((cadastros)=>{
+    const listaDePostagem = this.state.postagem.map((postar)=>{
       return(
-        <p>
-        {cadastros.nomeUsuario}
-        {cadastros.fotoUsuario}
-        {cadastros.fotoPost}
+        <div className= "AppConteiner">
+          <p>
+        {postar.nomeUsuario}
+        {postar.fotoUsuario}
+        { postar.fotoPost}
         </p>
+        
+        </div>
+        
       )
     })
-    return(
-      <div>{listaDeComponente}</div>
-    )
+    return (
+      <div>{listaDePostagem}</div>
+    );
   }
 }
 
-
-
-
-export default MensagemConteiner;
-
+export default App;
