@@ -48,15 +48,15 @@ class App extends React.Component {
   }
 
   onChangeInputNome = (e) =>{
-    this.setState({valorNomeUsusario: e.target.valeu}
+    this.setState({valorNomeUsusario: e.target.value}
       )
   }
   onChangeInputFoto = (e) =>{
-    this.setState({valorFotoUsusario: e.target.valeu}
+    this.setState({valorFotoUsusario: e.target.value}
       )
   }
   onChangeInputPost = (e) =>{
-    this.setState({valorFotoPost: e.target.valeu}
+    this.setState({valorFotoPost: e.target.value}
       )
   }
 
@@ -77,23 +77,23 @@ class App extends React.Component {
         />
         
           <input 
-            valeu ={this.state.valorNomeUsusario}
+            value ={this.state.valorNomeUsusario}
             onChange={this.onChangeInputNome}
             placeholder={"Nome do Usuario"}
          />
           <input 
-            valeu ={this.state.valorFotoUsusario}
+            value ={this.state.valorFotoUsusario}
             onChange={this.onChangeInputFoto}
             placeholder={"Foto Usuario"}
           />
           <input 
-            valeu ={this.state.valorFotoPost}
+            value ={this.state.valorFotoPost}
             onChange={this.onChangeInputPost}
             placeholder={"Foto Post"}
           />
     
            <button onClick = {this.adicionarPessoas}>Adicionar</button>
-
+            
             {listaDePostagem}
       </MainContainer>
     );
