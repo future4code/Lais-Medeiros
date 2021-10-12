@@ -3,11 +3,19 @@ import styled from 'styled-components'
 import Post from './components/Post/Post';
 
 const MainContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+width: 300px;
+diplay: flex;
+  
 `
+const ButtonConteiner = styled.div`
+width: 300px;
+margin-bottom: 20px;
+diplay: flex;
+padding-left: 10px;
+justify-content: space-between;
+`
+
+
 
 class App extends React.Component {
   state={
@@ -32,67 +40,68 @@ class App extends React.Component {
   }
     ],
 
-    valorNomeUsusario:"",
-    valorFotoUsusario:"",
-    valorFotoPost:""
+    nomeUsusario:"",
+    fotoUsusario:"",
+    fotoPost:""
   }
 
-  adicionarPessoas = () =>{
+  adicionarPost = () =>{
     const novosPost = {
-      nomeUsuario : this.state.valorNomeUsusario,
-      fotoUsuario : this.state.valorNomeUsusario,
-      fotoPost : this.state.valorFotoPost
+      nomeUsuario : this.state.nomeUsusario,
+      fotoUsuario : this.state.nomeUsusario,
+      fotoPost : this.state.fotoPost
     }
     const novosPosts = [...this.state.post, novosPost]
-    this.setState({ pessoas: novosPosts})
+    this.setState({ post: novosPosts})
   }
 
   onChangeInputNome = (e) =>{
-    this.setState({valorNomeUsusario: e.target.value}
+    this.setState({nomeUsusario: e.target.value}
       )
   }
   onChangeInputFoto = (e) =>{
-    this.setState({valorFotoUsusario: e.target.value}
+    this.setState({fotoUsusario: e.target.value}
       )
   }
   onChangeInputPost = (e) =>{
-    this.setState({valorFotoPost: e.target.value}
+    this.setState({fotoPost: e.target.value}
       )
   }
 
   render() {
-    const listaDePostagem = this.state.post.map((pessoa)=>{
+    const listaDePostagem = this.state.post.map((postagem)=>{
       return(
-        <p>
-          {pessoa.nomeUsuario}
-          {pessoa.fotoUsuario}
-          {pessoa.fotoPost}
-        </p>
+        <Post
+        nomeUsuario = {postagem.nomeUsuario}
+        fotoUsuario = {postagem.fotoUsuario}
+        fotoPost = {postagem.fotoPost}
+        />
       )
     })
     return (
-      <MainContainer>
-        <Post
-         
-        />
-        
+      <MainContainer> 
+          <ButtonConteiner>
           <input 
-            value ={this.state.valorNomeUsusario}
+            value ={this.state.nomeUsusario}
             onChange={this.onChangeInputNome}
             placeholder={"Nome do Usuario"}
          />
-          <input 
-            value ={this.state.valorFotoUsusario}
+            <fotoConteiner>
+            <input 
+            value ={this.state.fotoUsusario}
             onChange={this.onChangeInputFoto}
             placeholder={"Foto Usuario"}
           />
+            </fotoConteiner>
+          
+           
           <input 
-            value ={this.state.valorFotoPost}
+            value ={this.state.fotoPost}
             onChange={this.onChangeInputPost}
             placeholder={"Foto Post"}
           />
-    
-           <button onClick = {this.adicionarPessoas}>Adicionar</button>
+           <button onClick = {this.adicionarPost}>Adicionar</button>
+           </ButtonConteiner>
             
             {listaDePostagem}
       </MainContainer>
