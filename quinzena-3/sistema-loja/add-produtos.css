@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(240, 209, 230)
+
+}.primeiro{
+    background-color:rgb(219, 175, 213)
+}
+.segundo{
+    background-color: rgb(230, 211, 230);
+    text-align:justify;
+    font-size: 20px;
+    border-style: inset;
+    }
+
+    h2{
+    font-size: 200%;
+    }
+
+    form{
+        font-size: 200%;
+    }

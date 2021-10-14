@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(240, 209, 230)
+
+}.primeira-div{
+    background-color:rgb(219, 175, 213)
+}
+.segunda-div{
+    background-color: rgb(230, 211, 230);
+    text-align:justify;
+    font-size: 20px;
+    border-style: inset;
+    }

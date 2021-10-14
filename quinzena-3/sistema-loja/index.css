@@ -1,0 +1,30 @@
+
+body{
+    background-color: rgb(240, 209, 230)
+
+}
+.Inicio{
+    background-color:rgb(219, 175, 213) ;
+    text-align:center;  
+    font-style: italic;
+    font-size: 30px;
+    
+}
+
+.Meio{
+background-color: rgb(230, 211, 230);
+text-align: center;
+font-size: 30px;
+border-style: inset;
+}
+a{
+color: black;
+}
+h3{
+    text-align:justify;
+    
+}
+
+.Icone{
+    margin: 5%;
+}
