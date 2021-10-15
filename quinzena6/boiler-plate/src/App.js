@@ -20,6 +20,7 @@ const InputsContainer = styled.div`
 
 class App extends React.Component {
     state = {
+
       tarefas: [
         {
           id: Date.now(),
@@ -39,6 +40,7 @@ class App extends React.Component {
     }
 
    
+
 
   componentDidUpdate() {
 

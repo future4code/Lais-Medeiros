@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Post from './components/Post/Post';
 
 const MainContainer = styled.div`
+
 width: 300px;
 diplay: flex;
   
@@ -16,6 +17,7 @@ justify-content: space-between;
 `
 
 
+r
 
 class App extends React.Component {
   state={
@@ -39,6 +41,7 @@ class App extends React.Component {
 
   }
     ],
+
 
     nomeUsusario:"",
     fotoUsusario:"",
@@ -65,10 +68,12 @@ class App extends React.Component {
   }
   onChangeInputPost = (e) =>{
     this.setState({fotoPost: e.target.value}
+
       )
   }
 
   render() {
+
     const listaDePostagem = this.state.post.map((postagem)=>{
       return(
         <Post
@@ -102,6 +107,8 @@ class App extends React.Component {
           />
            <button onClick = {this.adicionarPost}>Adicionar</button>
            </ButtonConteiner>
+
+
             
             {listaDePostagem}
       </MainContainer>

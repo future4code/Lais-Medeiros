@@ -12,7 +12,6 @@ const PostContainer = styled.div`
   border: 1px solid gray;
   width: 300px;
   margin-bottom: 10px;
-  diplay: flex;
 `
 
 const PostHeader = styled.div`
@@ -51,6 +50,7 @@ class Post extends React.Component {
 
   onClickCurtida = () => {
     console.log('Curtiu!')
+
     if(this.state.curtido=== false){
       this.setState({curtido: this.state.curtido = true,
       numeroCurtidas: this.state.numeroCurtidas+ 1
@@ -64,6 +64,7 @@ class Post extends React.Component {
     
   }
  
+
   onClickComentario = () => {
     this.setState({
       comentando: !this.state.comentando
@@ -90,9 +91,7 @@ class Post extends React.Component {
 
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
-    }else{
-      
-    }
+
 
     return <PostContainer>
       <PostHeader>
