@@ -5,6 +5,7 @@ import VisualizarPlayList from './components/VisualizarPlayList';
 
 
 export default class App extends React.Component {
+  
   render(){
     return (
       <div >

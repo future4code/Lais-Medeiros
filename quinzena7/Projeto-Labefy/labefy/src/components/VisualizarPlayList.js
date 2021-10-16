@@ -1,8 +1,33 @@
 import React from "react";
 import axios from "axios";
-import "./styles.css"
+import styled from "styled-components";
 
- 
+const Visualizar = styled.div`
+    display: grid;
+    place-items: center;
+    margin: 20px;
+    font-size:20px ;
+    align-items: center;
+
+`
+
+const VisualizarLetra = styled.div`
+    font-size:25px ;
+    text-decoration: underline
+
+
+`
+const ButtonConteiner = styled.div`
+    display:flex;
+    justify-content: space-between;
+    margin: 20px ;
+    border-radius: 1px solid black;
+    padding: 10px;
+    width:350px;
+    border-style: groove;
+    text-shadow: 2px 2px 5px black;
+
+`
 
 
 
@@ -50,17 +75,20 @@ export default class VisualizarPlayList extends React.Component{
 
     render(){
         const listaDeMusica = this.state.playList.map((list)=>{
-            return( <div className={"Delete"}
+            return( <ButtonConteiner
             kei={list.id}>{list.name}
             <button  onClick={() => this.deletarPlayList(list.id)}>Delete</button>
-            </div>
+            </ButtonConteiner>
             )
         })
         return(
-            <div className={"vizualizar"}>
-                <h2>Música Adicionadas</h2>
+            <Visualizar>
+                <VisualizarLetra>
+                <h2>Músicas Adicionadas</h2>
+                </VisualizarLetra>
                 {listaDeMusica}
-            </div>
+                
+            </Visualizar>
         )
     }
 }
