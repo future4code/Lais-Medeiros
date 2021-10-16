@@ -1,10 +1,15 @@
 import React from "react";
 import axios from "axios";
+import "./styles.css"
+
+
+
+
 
 
 export default class CriarPlayList extends React.Component{
     state = {
-        nome:"",
+        nomePlayList:"",
     }
 
 
@@ -12,7 +17,7 @@ export default class CriarPlayList extends React.Component{
     adicionarMusica =() =>{
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
         const body ={
-            name: this.state.nome
+            name: this.state.nomePlayList
         }
         axios.post(url,body,{
             headers:{
@@ -21,7 +26,7 @@ export default class CriarPlayList extends React.Component{
         })
         .then((res)=>{
             alert("Música Cadastrada com sucesso!")
-            this.setState({nome:""})
+            this.setState({nomePlayList:""})
             console.log(res)
         })
         .catch((err)=>{
@@ -30,22 +35,23 @@ export default class CriarPlayList extends React.Component{
     }
 
     nomeMusica = (e)=>{
-        this.setState({nome: e.target.value})
+        this.setState({nomePlayList: e.target.value})
     }
 
 
     render(){
         return(
-            <div>
-                <h1>Criar Lista de Música</h1>
-                <input 
+            <div className={"listaConteiner"}>
+                
+                <h1> Playlist</h1>
+                <input className={"Criar1"}
                 placeholder= {"Nome da Música"}
-                value = {this.state.nome}
+                value = {this.state.nomePlayList}
                 onChange = {this.nomeMusica}
                 />
                 
+                <button className={"Criar2"} onClick={this.adicionarMusica}>Criar</button>
                 
-                <button onClick={this.adicionarMusica}>Criar</button>
             </div>
         )
     }
