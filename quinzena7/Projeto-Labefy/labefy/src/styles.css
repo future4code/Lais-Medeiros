@@ -1,0 +1,10 @@
+
+body{
+    background-color: rgba(88, 88, 92, 0.411);
+  text-shadow:rgb(255, 255, 255);
+  border-color:rgba(88, 88, 92, 0.411) ;
+  margin: 10px;
+  border-radius: 2px rgb(161, 148, 148);
+  background-color:rgba(231, 231, 231, 0.938) ;
+
+}

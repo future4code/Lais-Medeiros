@@ -65,8 +65,8 @@ class App extends React.Component {
       return(
         <p>
           {pessoa.nomeUsuario}
-          {pessoa.fotoUsuario}
-          {pessoa.fotoPost}
+          <img src={pessoa.fotoUsuario}/>
+          <img src={pessoa.fotoPost}/>
         </p>
       )
     })
