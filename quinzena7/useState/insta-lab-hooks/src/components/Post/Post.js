@@ -9,17 +9,34 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 
 const Post = (props) => {
-
+  const [curtido, setCurtido] = useState(false)
+  const [numeroCurtidas,setnumeroCurtidas]= useState (0)
+  const [comentando, setComentando] = useState (false)
+  const [numeroComentarios,setnumeroComentario]= useState(0)
+  const [comentarios, setComentario]= useState ([])
 
   const onClickCurtida = () => {
+    if(curtido){
+      setCurtido(!curtido)
+      setnumeroCurtidas(numeroCurtidas -1)
+    }else{
+      setCurtido(!curtido)
+      setnumeroCurtidas(numeroCurtidas + 1)
+    }
   };
 
   const onClickComentario = () => {
+    setComentando(!comentando)
   };
 
   const enviarComentario = (comentario) => {
+    const listaDeComentario = [...comentarios, comentario]
+    setComentario(listaDeComentario)
+    setComentando(comentando)
+    setnumeroComentario(numeroComentarios + 1)
   }
-
+  
+  
   return (
     <PostContainer>
       <PostHeader>
@@ -30,6 +47,7 @@ const Post = (props) => {
       <PostPhoto src={props.fotoPost} alt={'Imagem do post'}/>
 
       <PostFooter>
+         
         <IconeComContador
           // icone={iconeCurtida}
           onClickIcone={onClickCurtida}
@@ -42,7 +60,7 @@ const Post = (props) => {
           // valorContador={numeroComentarios}
         />
       </PostFooter>
-      {/* {caixaDeComentario} */}
+       {/*{caixaDeComentario}*/}
     </PostContainer>
   )
 }
