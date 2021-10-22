@@ -32,12 +32,21 @@ const Post = (props) => {
   const enviarComentario = (comentario) => {
     const listaDeComentario = [...comentarios, comentario]
     setComentario(listaDeComentario)
-    setComentando(comentando)
+    setComentando(false)
     setnumeroComentario(numeroComentarios + 1)
   }
   
-  
-  return (
+  const iconeCurtida =  curtido ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
+  const caixaDeComentario = comentando ? (
+    <SecaoComentario enviarComentario={enviarComentario}/>
+  ) : (comentarios.map((comentario) => {
+    return(<CommentContainer>
+          <p>{comentario}</p>
+      </CommentContainer>
+      )
+    })
+  )
+    return(
     <PostContainer>
       <PostHeader>
         <UserPhoto src={props.fotoUsuario} alt={'Imagem do usuario'}/>
@@ -49,18 +58,18 @@ const Post = (props) => {
       <PostFooter>
          
         <IconeComContador
-          // icone={iconeCurtida}
+          icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          // valorContador={numeroCurtidas}
+           valorContador={numeroCurtidas}
         />
 
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={onClickComentario}
-          // valorContador={numeroComentarios}
+          valorContador={numeroComentarios}
         />
       </PostFooter>
-       {/*{caixaDeComentario}*/}
+        {caixaDeComentario}
     </PostContainer>
   )
 }
