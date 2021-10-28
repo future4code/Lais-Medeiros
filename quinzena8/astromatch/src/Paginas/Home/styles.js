@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const HomerConteiner = styled.div`
     display: flex;
-    width: 100vw;
-    height:  80vh;
+    width: 70vw;
+    height:  70vh;
     justify-content: center;
     
 `
@@ -16,15 +16,16 @@ export const CandidateConteiner = styled.div`
     padding: 15px;
     height: 100%;
 `
-export const CandateName = styled.h2`
+export const Name = styled.h2`
     text-align: center;
 `
-export const CandidateDescripyion = styled.p`
+export const Descripyion = styled.p`
 
 `
-export const CandidateImage = styled.img`
-    width: 80%;
+export const CandidateImg = styled.img`
+    width: 200px;
+    height: 60%;
 `
-export const ClooseButton = styled.button`
-
+export const Button = styled.button`
+    
 `

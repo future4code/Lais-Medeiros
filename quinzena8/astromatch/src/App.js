@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './Paginas/Home'
 import Matches from './Paginas/Matches'
 import { useState } from 'react';
+import axios from "axios"
 
 
 
@@ -30,6 +31,10 @@ const App = () => {
     }
   }
 
+  //const cleanMatches =()=>{}
+
+  
+ 
   return (
     <div>
     {getPage()}
