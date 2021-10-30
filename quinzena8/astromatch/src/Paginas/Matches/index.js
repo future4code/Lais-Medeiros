@@ -20,22 +20,26 @@ export const Matches =()=>{
         })
     }
     
-    const newList = matchesList.map((mat)=>{
-        return (<ListItem> 
-        <img src={mat.photo}/>
-        <h3>{mat.name}</h3>
-        </ListItem>)
-        
-    })
+    const MapMaches = ()=>{
+        const newList = matchesList.map((mat)=>{
+            return (<ListItem> 
+            <img src={mat.photo}/>
+            <h3>{mat.name}</h3>
+            </ListItem>)
+            
+        })
+        return newList
+    }
+   
     useEffect(()=>{
         getMatchesList()
-    },[])
+    },[MapMaches])
         
     return(
         <PageConteiner>
            
             <CandidateConteiner>
-                {newList}  
+                {<MapMaches/>}  
                 
             </CandidateConteiner> 
             

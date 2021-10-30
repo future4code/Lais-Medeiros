@@ -5,6 +5,7 @@ export const PageConteiner = styled.div`
     display: flex;
     justify-content: center;
     height: 80vh;
+    
 `
 export const CandidateConteiner = styled.div`
     border: 1px solid black;
@@ -17,6 +18,9 @@ export const CandidateConteiner = styled.div`
     height: 100%;
 `
 export const ListItem = styled.div`
+    border:1px solid black;
+    margin: 5px;
+    justify-content: space-between;
     display: flex;
     width: 50%;
     height: 10%;

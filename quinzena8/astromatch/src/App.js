@@ -1,11 +1,13 @@
 import React from 'react';
 import Home from './Paginas/Home'
 import Matches from './Paginas/Matches'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from "axios"
+import { BASE_URL } from './Paginas/Constants/baseUrl';
+import styled from 'styled-components';
 
-
-
+const NewButtons = styled.button`
+`
 
 const App = () => {
   
@@ -31,16 +33,26 @@ const App = () => {
     }
   }
 
-  //const cleanMatches =()=>{}
+  const cleanMatches =()=>{
+    const URL = `${BASE_URL}/clear`
+      axios.put(URL)
+      .then((res)=>{
+        alert("Tudo limpo")
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+  }
 
   
  
   return (
     <div>
     {getPage()}
+    <NewButtons>
     <button onClick={changePage}>{pageName === "home" ? "Ir para Matches" : "Ir para Home"}</button>
-    <button>Limpar Matches</button>
-    
+    <button onClick={cleanMatches}>Limpar Matches</button>
+    </NewButtons>
     </div>
   );
 }
