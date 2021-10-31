@@ -37,13 +37,11 @@ export const Matches =()=>{
         
     return(
         <PageConteiner>
-           
-            <CandidateConteiner>
-                {<MapMaches/>}  
+           <CandidateConteiner>
+            {<MapMaches/>}
                 
             </CandidateConteiner> 
-            
-        </PageConteiner>
+         </PageConteiner>
     )
 }
 

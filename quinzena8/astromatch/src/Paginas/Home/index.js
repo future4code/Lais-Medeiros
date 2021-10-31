@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from "react"
-import {HomerConteiner,CandidateConteiner,Name,CandidateImg, Descripyion,Button} from "./styles"
+import {PageConteiner,CandidateConteiner,Name,CandidateImg, Descripyion,Button} from "./styles"
 import axios from "axios"
 import { BASE_URL } from "../Constants/baseUrl"
 
@@ -40,9 +40,11 @@ export const Home = () =>{
         },[])
         
     return(
-        <HomerConteiner>
+        <PageConteiner>
+            
             <CandidateConteiner>
-                <CandidateImg src={profile.photo} />
+                 
+                <CandidateImg src={profile.photo}/>
                 <Name>{profile.name}, {profile.age}</Name>
                         <Descripyion>{profile.bio}</Descripyion>
                         <div>
@@ -50,7 +52,7 @@ export const Home = () =>{
                             <Button onClick={()=>chossePerson(true)} >💚</Button>
                          </div>   
             </CandidateConteiner>
-        </HomerConteiner>
+        </PageConteiner>
     )
 }
 

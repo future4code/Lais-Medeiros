@@ -7,6 +7,7 @@ import { BASE_URL } from './Paginas/Constants/baseUrl';
 import styled from 'styled-components';
 
 const NewButtons = styled.button`
+  
 `
 
 const App = () => {
@@ -49,10 +50,10 @@ const App = () => {
   return (
     <div>
     {getPage()}
-    <NewButtons>
-    <button onClick={changePage}>{pageName === "home" ? "Ir para Matches" : "Ir para Home"}</button>
-    <button onClick={cleanMatches}>Limpar Matches</button>
-    </NewButtons>
+    
+    <NewButtons onClick={changePage}>{pageName === "home" ? "Ir para Matches" : "Ir para Home"}</NewButtons>
+    <NewButtons onClick={cleanMatches}>Limpar Matches</NewButtons>
+    
     </div>
   );
 }
