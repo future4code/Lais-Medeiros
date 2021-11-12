@@ -9,12 +9,10 @@ const CharacterDetailPage = (props) =>{
   const [details, setDetails] = useState("")
 
   const getCharacterDetail =()=>{
-    const URL= `${BASE_URL}people`
-
-      axios.get(URL)
+      axios.get()
       .then((res)=>{
-        console.log(res.data.results)
-        setDetails(res.data.results)
+        console.log()
+        setDetails()
       })
       .catch((err)=>{
         console.log(err)
@@ -32,9 +30,7 @@ const CharacterDetailPage = (props) =>{
         <h1>Detalhes de Personagem</h1>
         
         <div>
-          {details && details.map((detail)=>{
-            return (<li>{detail.name}</li>)
-          })}
+          
         </div>
         <button onClick={()=> props.goToListPage()}>Voltar para página inicial</button>
     </div>

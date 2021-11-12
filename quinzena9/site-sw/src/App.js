@@ -5,27 +5,36 @@ import CharacterListPage from "./Components/pages/CharacterListPage/CharacterLis
 
 const App = () =>{
   const [currentPage, setCurrentPage] = useState("list")
+  const [detailUrl, setDetailsUrl] = useState("")
 
   const selectPage =()=>{
     switch (currentPage) {
       case "list":
         return <CharacterListPage goToDetailsPage={goToDetailsPage}/>
       case "details":
-        return <CharacterDetailPage goToListPage={goToDetailsPage}/>
+        return <CharacterDetailPage goToListPage={goToDetailsPage} url={detailUrl}/>
       default:
-        return <CharacterDetailPage/>
+        return <CharacterDetailPage goToListPage={goToDetailsPage}/>
+       
     }
   }
 
 
-  const goToDetailsPage= ()=>{
+  const goToDetailsPage= (url)=>{
     if(currentPage === "list"){
       setCurrentPage("details")
+      setDetailsUrl(url)
     }else{
       setCurrentPage("list")
     }
   }
 
+  /*const goToDetailsPage =()=>{
+    setCurrentPage({currentPage: "list", setDetailsUrl:""})
+  }
+  const goToDetailsPages =(url)=>{
+    setCurrentPage({currentPage:"details", setDetailsUrl: url })
+  }*/
   
 
   return (
@@ -33,7 +42,6 @@ const App = () =>{
       
       <h1>Star Wars</h1>
       {selectPage()}
-      {/*<button onClick={pageChoice}>{currentPage === "list" ? "Ir Para Destalhes" : "Ir Para Lista"}</button>*/}
       
     </div>
   );

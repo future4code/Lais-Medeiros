@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { BASE_URL } from "../../constants/baseUrl";
 
 const Listas = styled.div`
- cursor: pointer;
  border: 1px solid black;
  width: 300px;
  height: 20px;
  margin: 5px;
- 
+ &:hover {
+        cursor: pointer;
+        background-color: lightblue;
+    }
 `
 const CharacterListPage = (props) =>{
     const [charecterList, setCharecterList] = useState("")
@@ -20,6 +22,7 @@ const CharacterListPage = (props) =>{
         axios.get(URL)
         .then((res)=>{
             setCharecterList(res.data.results)
+            console.log(res.data.results)
         })
         .catch((err)=>{
             console.log(err)
@@ -40,7 +43,7 @@ const CharacterListPage = (props) =>{
        
         <div>
             {charecterList && charecterList.map((list)=>{
-                return(<Listas onClick={()=>props.goToDetailsPage()}>{list.name}</Listas>)
+                return(<Listas  onClick={()=>props.goToDetailsPage(list.url)}>{list.name}</Listas>)
             })}
         </div> 
      
