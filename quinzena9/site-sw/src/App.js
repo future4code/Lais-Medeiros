@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import CharacterDetailPage from "./pages/CharacterDetailPage/CharacterDetailPage";
-import CharacterListPage from "./pages/CharacterListPage/CharacterListPage";
+import CharacterDetailPage from "./Components/pages/CharacterDetailPage/CharacterDetailPage";
+import CharacterListPage from "./Components/pages/CharacterListPage/CharacterListPage";
 
- 
 
 const App = () =>{
   const [currentPage, setCurrentPage] = useState("list")
@@ -10,16 +9,16 @@ const App = () =>{
   const selectPage =()=>{
     switch (currentPage) {
       case "list":
-        return <CharacterListPage/>
+        return <CharacterListPage goToDetailsPage={goToDetailsPage}/>
       case "details":
-        return <CharacterDetailPage/>
+        return <CharacterDetailPage goToListPage={goToDetailsPage}/>
       default:
         return <CharacterDetailPage/>
     }
   }
 
 
-  const pageChoice = ()=>{
+  const goToDetailsPage= ()=>{
     if(currentPage === "list"){
       setCurrentPage("details")
     }else{
@@ -27,13 +26,14 @@ const App = () =>{
     }
   }
 
+  
 
   return (
    <div>
       
       <h1>Star Wars</h1>
       {selectPage()}
-      <button onClick={pageChoice}>{currentPage === "list" ? "Ir Para Destalhes" : "Ir Para Lista"}</button>
+      {/*<button onClick={pageChoice}>{currentPage === "list" ? "Ir Para Destalhes" : "Ir Para Lista"}</button>*/}
       
     </div>
   );

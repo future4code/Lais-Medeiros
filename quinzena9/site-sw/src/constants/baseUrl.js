@@ -1,1 +1,0 @@
-export const BASE_URL= "http https://swapi.dev/api/people/1/lais-medeiros-banu" 
