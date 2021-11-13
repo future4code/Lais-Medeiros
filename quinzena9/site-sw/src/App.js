@@ -29,12 +29,6 @@ const App = () =>{
     }
   }
 
-  /*const goToDetailsPage =()=>{
-    setCurrentPage({currentPage: "list", setDetailsUrl:""})
-  }
-  const goToDetailsPages =(url)=>{
-    setCurrentPage({currentPage:"details", setDetailsUrl: url })
-  }*/
   
 
   return (
