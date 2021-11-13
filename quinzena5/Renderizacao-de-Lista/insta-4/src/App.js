@@ -81,6 +81,7 @@ class App extends React.Component {
         fotoUsuario = {postagem.fotoUsuario}
         fotoPost = {postagem.fotoPost}
         />
+
       )
     })
     return (
