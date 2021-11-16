@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import CharacterDetailPage from "./Components/pages/CharacterDetailPage/CharacterDetailPage";
 import CharacterListPage from "./Components/pages/CharacterListPage/CharacterListPage";
+import{Home,Menu} from "./styled"
+
+
 
 
 const App = () =>{
@@ -32,12 +35,11 @@ const App = () =>{
   
 
   return (
-   <div>
-      
-      <h1>Star Wars</h1>
-      {selectPage()}
-      
-    </div>
+   <Home>
+      <Menu>
+        {selectPage()}
+      </Menu>  
+    </Home>
   );
 }
 
