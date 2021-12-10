@@ -1,11 +1,11 @@
 import react from "react";
 
-const TripDetailsPage = () =>{
-    return(
-        <div>
-            TripDetailsPage
-        </div>
-    )
+const TripDetailsPage = () => {
+  return (
+    <div>
+      <hi> TripDetailsPage</hi>
+    </div>
+  );
 }
 
-export default TripDetailsPage
+export default TripDetailsPage;

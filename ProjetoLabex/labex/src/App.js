@@ -1,25 +1,28 @@
 import react from "react";
-import AdminHomePage from ".AdminHomePage/pages/AdminHomePage/AdminHomePage";
-import ApplicationFormPage from ".ApplicationFormPage/pages/ApplicationFormPage/ApplicationFormPage";
-import CreateTripPage from ".CreateTripPage/pages/CreateTripPage/CreateTripPage";
-import HomePage from ".HomePage/pages/HomePages/HomePage";
-import ListTripsPage from ".ListTripsPage/pages/ListTripPage/ListTripsPage"
-import LoginPages from "./pages/LoginPage/LoginPage";
-import TripDetailsPage from ".TripDetailsPage/pages/TripDetailsPage/TripDetailsPage";
+import AdminHomePage from "./pages/AdminHomePage/AdminHomePage"
+import ApplicationFormPage from "./pages/ApplicationFormPage/ApplicationFormPage"
+import CreateTripPage from "./pages/CreateTripPage/CreateTripPage"
+import HomePage from "./pages/HomePage/HomePage"
+import ListTripsPage from "./pages/ListTripsPage/ListTripsPage"
+import LoginPage from "./pages/LoginPage/LoginPage"
+import TripDetailsPage from "./pages/TripDetailsPage/TripDetailsPage"
+
+
 
 const App = () => {
   return (
     <div>
-      <h1>oi</h1>
-      <AdminHomePage/>
-      <ApplicationFormPage/>
-      <CreateTripPage/>
-      <HomePage/>
-      <ListTripsPage/>
-      <LoginPages/>
-      <TripDetailsPage/>
+      <hi> tudo certo</hi>
+        <AdminHomePage/>
+        <ApplicationFormPage/>
+        <CreateTripPage/>
+        <HomePage/>
+        <ListTripsPage/>
+        <LoginPage/>
+        <TripDetailsPage/>
+
     </div>
-  )
+  );
 }
 
 export default App;

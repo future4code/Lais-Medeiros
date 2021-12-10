@@ -1,11 +1,11 @@
 import react from "react";
 
-const CreateTripPage = ()=>{
-    return(
-        <div>
-            CreateTripPage
-        </div>
-    )
+const CreateTripPage= () => {
+  return (
+    <div>
+      <hi> CreateTripPage</hi>
+    </div>
+  );
 }
 
-export default CreateTripPage
+export default CreateTripPage;
