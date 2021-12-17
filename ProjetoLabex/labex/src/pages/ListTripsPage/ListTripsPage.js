@@ -1,17 +1,18 @@
 import axios from "axios";
-import react, { useEffect } from "react";
+import react, { useEffect, useState } from "react";
 import { BASE_URL } from "../../constants/baseUrl";
+import {List} from "./Styled"
 
 const ListTripsPage= () => {
-  const [ listTrips, setListTrips] = ("")
+  const [ listTrips, setListTrips] = useState ("")
 
   const getTrips = ()=>{
     const URL = `${BASE_URL}trips`
 
     axios(URL)
     .then((res)=>{
-      console.log(res.data.trips)
-      setListTrips(res.data.trips)
+      console.log(res.data)
+      setListTrips(res.data)
     })
     .catch((err)=>{
       console.log(err)
@@ -26,11 +27,8 @@ const ListTripsPage= () => {
     <div>
 
       <hi> ListTripsPage</hi>
-      <div>
-      {listTrips && listTrips.map((list)=>{
-          
-      })}
-      </div>
+    
+      <List></List>
       
 
     </div>
